@@ -1,0 +1,136 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Catppuccin Mocha color scheme for dark mode */
+    --background: 240 21% 15%;  /* Catppuccin base */
+    --foreground: 227 70% 87%;  /* Catppuccin text */
+
+    --card: 240 24% 10%;  /* Catppuccin mantle */
+    --card-foreground: 227 70% 87%;  /* Catppuccin text */
+
+    --popover: 240 21% 15%;  /* Catppuccin base */
+    --popover-foreground: 227 70% 87%;  /* Catppuccin text */
+
+    --primary: 227 70% 87%;  /* Catppuccin text */
+    --primary-foreground: 240 21% 15%;  /* Catppuccin base */
+
+    --secondary: 233 13% 30%;  /* Catppuccin surface-1 */
+    --secondary-foreground: 227 70% 87%;  /* Catppuccin text */
+
+    --muted: 233 13% 30%;  /* Catppuccin surface-1 */
+    --muted-foreground: 226 64% 78%;  /* Catppuccin subtext-1 */
+
+    --accent: 233 13% 30%;  /* Catppuccin surface-1 */
+    --accent-foreground: 227 70% 87%;  /* Catppuccin text */
+
+    --destructive: 343 81% 75%;  /* Catppuccin red */
+    --destructive-foreground: 227 70% 87%;  /* Catppuccin text */
+
+    --border: 233 13% 30%;  /* Catppuccin surface-1 */
+    --input: 233 13% 30%;  /* Catppuccin surface-1 */
+    --ring: 226 64% 78%;  /* Catppuccin subtext-1 */
+    
+    --sidebar-background: 240 24% 10%;  /* Catppuccin mantle */
+    --sidebar-foreground: 227 70% 87%;  /* Catppuccin text */
+    --sidebar-primary: 242 75% 63%;  /* Catppuccin lavender */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 20%;  /* Custom darker surface */
+    --sidebar-accent-foreground: 227 70% 87%;  /* Catppuccin text */
+    --sidebar-border: 240 20% 20%;  /* Custom darker surface */
+    --sidebar-ring: 242 75% 63%;  /* Catppuccin lavender */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+  }
+  
+  /* Add specific Catppuccin gradients */
+  .catppuccin-gradient-1 {
+    @apply bg-gradient-to-r from-catppuccin-lavender via-catppuccin-mauve to-catppuccin-pink;
+  }
+  
+  .catppuccin-gradient-2 {
+    @apply bg-gradient-to-r from-catppuccin-blue via-catppuccin-sapphire to-catppuccin-sky;
+  }
+  
+  .catppuccin-gradient-3 {
+    @apply bg-gradient-to-r from-catppuccin-teal via-catppuccin-green to-catppuccin-yellow;
+  }
+  
+  .catppuccin-gradient-4 {
+    @apply bg-gradient-to-r from-catppuccin-peach via-catppuccin-maroon to-catppuccin-red;
+  }
+  
+  .catppuccin-text-gradient-1 {
+    @apply bg-gradient-to-r from-catppuccin-lavender via-catppuccin-mauve to-catppuccin-pink bg-clip-text text-transparent;
+  }
+  
+  .catppuccin-text-gradient-2 {
+    @apply bg-gradient-to-r from-catppuccin-blue via-catppuccin-sapphire to-catppuccin-sky bg-clip-text text-transparent;
+  }
+}
